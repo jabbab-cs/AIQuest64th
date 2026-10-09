@@ -17,8 +17,7 @@ GlobalWorkerOptions.workerSrc = pathToFileURL(require.resolve("pdfjs-dist/legacy
 const standardFontDataUrl = join(dirname(require.resolve("pdfjs-dist/package.json")), "standard_fonts") + "/";
 
 function bucketPath(): { bucket: ReturnType<typeof objectStorageClient.bucket>; privatePrefix: string } {
-  const raw = process.env.PRIVATE_OBJECT_DIR;
-  if (!raw) throw new Error("PRIVATE_OBJECT_DIR is not configured");
+  const raw = process.env.PRIVATE_OBJECT_DIR || "local/private";
   const clean = raw.replace(/^\/+|\/+$/g, "");
   const slash = clean.indexOf("/");
   if (slash < 1) throw new Error("PRIVATE_OBJECT_DIR is invalid");

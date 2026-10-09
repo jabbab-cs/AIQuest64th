@@ -77,24 +77,32 @@ This case starts with every piece of evidence confirmed and the scope approved: 
 | One project is in verification at a time, with a fixed code | Each approved project gets its own code |
 | No sign-in | Bank, institution and installer roles with authentication |
 
-## Full stack (Replit)
+## Full stack (for development)
 
-This is a pnpm monorepo:
+The stack is a pnpm monorepo: React, Vite and Tailwind for the web app, Express and Drizzle for the API, Postgres for the database, and uploaded PDFs on the local disk.
 
-- `artifacts/campus-finance`: React 19, Vite, Tailwind v4, shadcn/ui and wouter. Pages are in `src/pages`, the Phase 2 board is in `src/components/verification`, and the installer page is `src/pages/Site.tsx`.
-- `artifacts/api-server`: Express 5, Drizzle and Postgres. Phase 2 is in `src/lib/verification.ts`, with routes under `/api/verification`, `/api/site` and `/api/applications/:id/approve-scope`.
-- `lib/greenroute-research`: the screening calculations and source register.
-- `lib/api-spec`: OpenAPI, with Orval codegen into `lib/api-zod` and `lib/api-client-react`.
+You need Node.js 22 or newer, pnpm (`npm install -g pnpm`) and Postgres 16. For Postgres, the easiest route is Docker: `docker run -d --name tahaqqaq-db -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=tahaqqaq -p 5432:5432 postgres:16`.
 
 ```bash
 pnpm install
-# API: needs DATABASE_URL (Postgres); object storage is needed to upload real files
-pnpm --filter @workspace/api-server run dev
-# Web
-pnpm --filter @workspace/campus-finance run dev
+cp .env.example .env        # On Windows: copy .env.example .env
+pnpm run db:push            # creates the tables
+pnpm run dev:api            # API on http://localhost:8080
+pnpm run dev:web            # in a second terminal: web app on http://localhost:5173
 ```
 
-To rebuild the no-install preview after changing the frontend, build `artifacts/campus-finance` and copy its `dist/public` output into `tahaqqaq-preview/app`.
+The two demo cases are created automatically the first time the API starts. Real uploads are stored in `artifacts/api-server/storage/`. AI screening of real, non-demo uploads only runs if you set `ANTHROPIC_API_KEY` in `.env`; the demo never needs it.
+
+Where things live:
+
+- `artifacts/campus-finance`: the web app (React 19, Vite, Tailwind v4, shadcn/ui, wouter). Pages are in `src/pages`, the Phase 2 board is in `src/components/verification`, and the installer page is `src/pages/Site.tsx`.
+- `artifacts/api-server`: the API (Express 5, Drizzle, Postgres). Phase 2 is in `src/lib/verification.ts` and `data/phase2/*.json`.
+- `lib/greenroute-research`: the screening calculations and source register.
+- `lib/db`: the database schema.
+- `lib/api-spec`: the OpenAPI spec, with Orval codegen into `lib/api-zod` and `lib/api-client-react`.
+- `tahaqqaq-preview`: the no-install demo server.
+
+To refresh the no-install demo after changing the web app, run `pnpm --filter @workspace/campus-finance run build` and copy `artifacts/campus-finance/dist/public` into `tahaqqaq-preview/app`.
 
 ## Data and limits
 

@@ -61,8 +61,9 @@ const extractionSchema = {
   },
 };
 async function extractAI(pages: TextPage[]) {
-  if (!process.env.AI_INTEGRATIONS_ANTHROPIC_BASE_URL || !process.env.AI_INTEGRATIONS_ANTHROPIC_API_KEY) throw new Error("Anthropic integration is not configured.");
-  const anthropic = new Anthropic({ apiKey: process.env.AI_INTEGRATIONS_ANTHROPIC_API_KEY, baseURL: process.env.AI_INTEGRATIONS_ANTHROPIC_BASE_URL, maxRetries: 0, timeout: 240000 });
+  // Optional: real-upload screening only runs when ANTHROPIC_API_KEY is set. The demo never needs it.
+  if (!process.env.ANTHROPIC_API_KEY) throw new Error("AI screening is off. Set ANTHROPIC_API_KEY to screen real uploads.");
+  const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY, maxRetries: 0, timeout: 240000 });
   const text = pages.map(p => `<page number="${p.page}">\n${p.text}\n</page>`).join("\n");
   if (text.length > 600000) throw new Error("Document text exceeds safe model input limit. Split this document; no text was silently omitted.");
   const message = await pRetry(() => aiLimit(() => anthropic.messages.create({ model: "claude-opus-5", max_tokens: 8192, output_config: { format: { type: "json_schema", schema: extractionSchema } }, system: systemPrompt, messages: [{ role: "user", content: text }] })), { retries: 3, minTimeout: 1500, maxTimeout: 20000, shouldRetry: context => {

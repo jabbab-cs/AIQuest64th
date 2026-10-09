@@ -1,4 +1,4 @@
-import { Router, type IRouter } from "express";
+import express, { Router, type IRouter } from "express";
 import { randomUUID } from "node:crypto";
 import { eq, desc, inArray, sql } from "drizzle-orm";
 import { PDFDocument, StandardFonts, rgb } from "pdf-lib";
@@ -114,6 +114,14 @@ router.post("/uploads/request-url", async (req, res): Promise<void> => {
   }
   const uploadURL = await storage.getObjectEntityUploadURL();
   res.json(RequestUploadUrlResponse.parse({ uploadURL, objectPath: storage.normalizeObjectEntityPath(uploadURL) }));
+});
+router.put("/uploads/:id", express.raw({ type: () => true, limit: MAX_SIZE }), async (req, res): Promise<void> => {
+  const id = param(req.params.id) || "";
+  const bytes = Buffer.isBuffer(req.body) ? req.body : Buffer.alloc(0);
+  if (!/^[0-9a-f-]{36}$/.test(id) || bytes.length < 1 || bytes.subarray(0, 5).toString() !== "%PDF-") { res.status(400).json({ error: "Upload a non-empty PDF up to 15 MB." }); return; }
+  if ((await storage.getObjectEntityFile(`/objects/uploads/${id}`).then(() => true, () => false))) { res.status(409).json({ error: "This upload slot was already used." }); return; }
+  await storage.saveUpload(id, bytes);
+  res.status(200).end();
 });
 router.post("/applications", async (req, res): Promise<void> => {
   await ready();

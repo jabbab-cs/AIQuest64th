@@ -3,10 +3,12 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "preinstall": "sh -c 'rm -f package-lock.json yarn.lock; case \"$npm_config_user_agent\" in pnpm/*) ;; *) echo \"Use pnpm instead\" >&2; exit 1 ;; esac'",
     "build": "pnpm run typecheck && pnpm -r --if-present run build",
     "typecheck:libs": "tsc --build",
-    "typecheck": "pnpm run typecheck:libs && pnpm -r --filter \"./artifacts/**\" --filter \"./scripts\" --if-present run typecheck"
+    "typecheck": "pnpm run typecheck:libs && pnpm -r --filter \"./artifacts/**\" --if-present run typecheck",
+    "db:push": "pnpm --filter @workspace/db run push",
+    "dev:api": "pnpm --filter @workspace/api-server run dev",
+    "dev:web": "pnpm --filter @workspace/campus-finance run dev"
   },
   "private": true,
   "dependencies": {
@@ -20,7 +22,6 @@
     "@radix-ui/react-tabs": "^1.1.21",
     "@radix-ui/react-toast": "^1.2.23",
     "@radix-ui/react-tooltip": "^1.2.16",
-    "@replit/connectors-sdk": "^0.4.3",
     "@tanstack/react-query": "catalog:",
     "class-variance-authority": "catalog:",
     "clsx": "catalog:",
