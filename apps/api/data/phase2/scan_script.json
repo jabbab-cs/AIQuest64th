@@ -1,0 +1,134 @@
+{
+  "delivery": [
+    {
+      "item": "panels-1",
+      "image": "delivery-1.png",
+      "tone": "green",
+      "serial": "SP58-2026-A-004817",
+      "title": "Matched",
+      "titleAr": "مطابق",
+      "detail": "SunPeak 580 W (SP‑580M), on the packing list.",
+      "detailAr": "سن بيك 580 واط (⁦SP‑580M⁩)، موجود في قائمة التعبئة.",
+      "bank": "Approved model, on the packing list, not financed before."
+    },
+    {
+      "item": "panels-2",
+      "image": "delivery-2.png",
+      "tone": "green",
+      "serial": "SP58-2026-A-004818",
+      "title": "Matched",
+      "titleAr": "مطابق",
+      "detail": "SunPeak 580 W (SP‑580M), on the packing list.",
+      "detailAr": "سن بيك 580 واط (⁦SP‑580M⁩)، موجود في قائمة التعبئة.",
+      "bank": "Approved model, on the packing list, not financed before."
+    },
+    {
+      "item": "panels-3",
+      "image": "delivery-3.png",
+      "tone": "red",
+      "serial": "SP58-2025-A-001203",
+      "title": "Stop. Already financed",
+      "titleAr": "توقف. مموّل سابقاً",
+      "detail": "This serial is registered to another financed project. Set the panel aside and tell the supplier. Shipment 3 moves to the end of your list.",
+      "detailAr": "هذا الرقم التسلسلي مسجّل لمشروع ممول آخر. ضع اللوح جانباً وأبلغ المورّد. انتقلت الشحنة 3 إلى نهاية قائمتك.",
+      "bank": "Serial already financed under another loan (Al-Noor School, 2025). Shipment 3 is open until the supplier's replacement is scanned."
+    },
+    {
+      "item": "panels-4",
+      "image": "delivery-4.png",
+      "tone": "amber",
+      "serial": "SP55-2026-B-000412",
+      "title": "Check. Wrong model",
+      "titleAr": "تحقق. طراز غير مطابق",
+      "detail": "SP‑550M (550 W) is not the approved model, SP‑580M (580 W). Set it aside and tell the supplier. Shipment 4 moves to the end of your list.",
+      "detailAr": "الطراز ⁦SP‑550M⁩ (550 واط) ليس الطراز المعتمد ⁦SP‑580M⁩ (580 واط). ضعه جانباً وأبلغ المورّد. انتقلت الشحنة 4 إلى نهاية قائمتك.",
+      "bank": "Model swap: SP-550M (550 W) delivered instead of the approved SP-580M (580 W). Shipment 4 is open until a 580 W panel is scanned."
+    },
+    {
+      "item": "inverter",
+      "image": "delivery-7.png",
+      "tone": "green",
+      "serial": "INV-250-2026-JO-00731",
+      "title": "Matched",
+      "titleAr": "مطابق",
+      "detail": "250 kW inverter, serial matches the approved scope.",
+      "detailAr": "عاكس 250 كيلوواط، الرقم التسلسلي مطابق للنطاق المعتمد.",
+      "bank": "Inverter serial matches the approved scope."
+    },
+    {
+      "item": "led",
+      "image": "delivery-8.png",
+      "tone": "green",
+      "serial": "LED-36W-2026-JO-0458",
+      "title": "Matched",
+      "titleAr": "مطابق",
+      "detail": "LED panel 36 W, 1,200 pieces, matches the approved offer.",
+      "detailAr": "وحدات LED بقدرة 36 واط، 1,200 قطعة، مطابقة للعرض المعتمد.",
+      "bank": "LED consignment of 1,200 fittings matches the approved offer."
+    },
+    {
+      "item": "panels-3",
+      "image": "delivery-5.png",
+      "tone": "green",
+      "serial": "SP58-2026-A-004819",
+      "title": "Matched",
+      "titleAr": "مطابق",
+      "detail": "SunPeak 580 W (SP‑580M), on the packing list.",
+      "detailAr": "سن بيك 580 واط (⁦SP‑580M⁩)، موجود في قائمة التعبئة.",
+      "bank": "Supplier replacement for SP58-2025-A-001203. Approved model, not financed before."
+    },
+    {
+      "item": "panels-4",
+      "image": "delivery-6.png",
+      "tone": "green",
+      "serial": "SP58-2026-A-004820",
+      "title": "Matched",
+      "titleAr": "مطابق",
+      "detail": "SunPeak 580 W (SP‑580M), on the packing list.",
+      "detailAr": "سن بيك 580 واط (⁦SP‑580M⁩)، موجود في قائمة التعبئة.",
+      "bank": "Supplier replacement for SP55-2026-B-000412. Approved 580 W model."
+    }
+  ],
+  "switchOn": [
+    {
+      "item": "inverter-screen",
+      "image": "switchon-1.png",
+      "tone": "amber",
+      "title": "Retake",
+      "titleAr": "أعد التصوير",
+      "detail": "The screen can't be read. Hold the phone steady, avoid the glare and retake it now.",
+      "detailAr": "لا يمكن قراءة الشاشة. ثبّت الهاتف وتجنّب الانعكاس وأعد التصوير الآن.",
+      "bank": "Inverter photo unreadable (blur and glare). Retake requested."
+    },
+    {
+      "item": "inverter-screen",
+      "image": "switchon-2.png",
+      "tone": "green",
+      "title": "Inverter running",
+      "titleAr": "العاكس يعمل",
+      "detail": "182.4 kW now, 1,286 kWh today. Serial matches.",
+      "detailAr": "182.4 كيلوواط الآن، 1,286 كيلوواط ساعة اليوم. الرقم التسلسلي مطابق.",
+      "bank": "Inverter running at 182.4 kW, 1,286 kWh today. Serial matches delivery."
+    },
+    {
+      "item": "meter",
+      "image": "switchon-3.png",
+      "tone": "green",
+      "title": "Export started",
+      "titleAr": "بدأ التصدير",
+      "detail": "Meter export register reads 126.4 kWh.",
+      "detailAr": "سجل التصدير في العداد يقرأ 126.4 كيلوواط ساعة.",
+      "bank": "Meter export register at 126.4 kWh: the system is feeding the grid."
+    },
+    {
+      "item": "led-on",
+      "image": "switchon-4.png",
+      "tone": "green",
+      "title": "Lighting on",
+      "titleAr": "الإنارة تعمل",
+      "detail": "New LED panels installed and lit.",
+      "detailAr": "وحدات LED الجديدة مركّبة وتعمل.",
+      "bank": "New LED fittings installed and lit."
+    }
+  ]
+}

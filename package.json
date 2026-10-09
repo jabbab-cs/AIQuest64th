@@ -1,36 +1,18 @@
 {
-  "name": "workspace",
+  "name": "tahaqqaq",
   "version": "0.0.0",
-  "license": "MIT",
   "scripts": {
     "build": "pnpm run typecheck && pnpm -r --if-present run build",
     "typecheck:libs": "tsc --build",
-    "typecheck": "pnpm run typecheck:libs && pnpm -r --filter \"./artifacts/**\" --if-present run typecheck",
-    "db:push": "pnpm --filter @workspace/db run push",
-    "dev:api": "pnpm --filter @workspace/api-server run dev",
-    "dev:web": "pnpm --filter @workspace/campus-finance run dev"
+    "typecheck": "pnpm run typecheck:libs && pnpm -r --filter \"./apps/**\" --if-present run typecheck",
+    "db:push": "pnpm --filter @tahaqqaq/db run push",
+    "dev:api": "pnpm --filter @tahaqqaq/api run dev",
+    "dev:web": "pnpm --filter @tahaqqaq/web run dev",
+    "demo": "node tahaqqaq-preview/server.mjs",
+    "demo:build": "pnpm --filter @tahaqqaq/web run build && pnpm --filter @tahaqqaq/api exec esbuild src/lib/verification.ts --bundle --minify --platform=node --format=esm --outfile=../../tahaqqaq-preview/verification.mjs && node -e \"const fs=require('fs');fs.rmSync('tahaqqaq-preview/app',{recursive:true,force:true});fs.cpSync('apps/web/dist/public','tahaqqaq-preview/app',{recursive:true})\"",
+    "test": "pnpm --filter @tahaqqaq/api run test"
   },
   "private": true,
-  "dependencies": {
-    "@hookform/resolvers": "^3.10.0",
-    "@radix-ui/react-dialog": "^1.1.23",
-    "@radix-ui/react-label": "^2.1.15",
-    "@radix-ui/react-progress": "^1.1.16",
-    "@radix-ui/react-scroll-area": "^1.2.18",
-    "@radix-ui/react-separator": "^1.1.15",
-    "@radix-ui/react-slot": "^1.3.3",
-    "@radix-ui/react-tabs": "^1.1.21",
-    "@radix-ui/react-toast": "^1.2.23",
-    "@radix-ui/react-tooltip": "^1.2.16",
-    "@tanstack/react-query": "catalog:",
-    "class-variance-authority": "catalog:",
-    "clsx": "catalog:",
-    "lucide-react": "catalog:",
-    "react-hook-form": "^7.88.0",
-    "tailwind-merge": "catalog:",
-    "wouter": "catalog:",
-    "zod": "catalog:"
-  },
   "devDependencies": {
     "prettier": "^3.9.6",
     "typescript": "~5.9.3"

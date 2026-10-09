@@ -1,0 +1,111 @@
+{
+  "code": "TQ-4821",
+  "systemKw": 250,
+  "currency": "JOD",
+  "items": [
+    {
+      "name": "Rooftop solar PV, 250 kW",
+      "nameAr": "طاقة شمسية على الأسطح، 250 كيلوواط",
+      "amount": 250000
+    },
+    {
+      "name": "LED lighting retrofit",
+      "nameAr": "استبدال الإنارة بمصابيح LED",
+      "amount": 180000
+    }
+  ],
+  "approvedTotal": 430000,
+  "loanAmount": 344000,
+  "payments": [
+    {
+      "stage": 1,
+      "label": "Payment 1, on delivery",
+      "labelAr": "الدفعة الأولى عند التوريد",
+      "amount": 206400
+    },
+    {
+      "stage": 2,
+      "label": "Payment 2, on switch-on",
+      "labelAr": "الدفعة الثانية عند التشغيل",
+      "amount": 137600
+    }
+  ],
+  "equipment": {
+    "panelModel": "SunPeak 580 W",
+    "panelModelAr": "سن بيك 580 واط",
+    "panels": 432,
+    "shipments": 4,
+    "panelsPerShipment": 108,
+    "inverterSerial": "INV-250-2026-JO-00731",
+    "ledFittings": 1200,
+    "supplier": "Synthetic supplier, Amman"
+  },
+  "confirmed": [
+    "12 months of electricity bills (Oct 2025 to Sep 2026) confirm the baseline",
+    "Grid-impact study approved by the distribution company",
+    "Panel and inverter certificates received for the exact models",
+    "LED certificates cover every line in the offer",
+    "Audited 2025 financial statements and debt schedule received",
+    "Supplier quotes valid and matched to the approved amounts",
+    "Repayment coverage confirmed by the credit team"
+  ],
+  "checklist": {
+    "delivery": [
+      {
+        "id": "panels-1",
+        "label": "Panel shipment 1",
+        "labelAr": "شحنة الألواح 1",
+        "note": "108 panels",
+        "noteAr": "108 ألواح"
+      },
+      {
+        "id": "panels-2",
+        "label": "Panel shipment 2",
+        "labelAr": "شحنة الألواح 2",
+        "note": "108 panels",
+        "noteAr": "108 ألواح"
+      },
+      {
+        "id": "panels-3",
+        "label": "Panel shipment 3",
+        "labelAr": "شحنة الألواح 3",
+        "note": "108 panels",
+        "noteAr": "108 ألواح"
+      },
+      {
+        "id": "panels-4",
+        "label": "Panel shipment 4",
+        "labelAr": "شحنة الألواح 4",
+        "note": "108 panels",
+        "noteAr": "108 ألواح"
+      },
+      {
+        "id": "inverter",
+        "label": "Inverter, 250 kW",
+        "labelAr": "العاكس، 250 كيلوواط"
+      },
+      {
+        "id": "led",
+        "label": "LED fittings (1,200)",
+        "labelAr": "وحدات إنارة LED (1,200)"
+      }
+    ],
+    "switchOn": [
+      {
+        "id": "inverter-screen",
+        "label": "Inverter screen",
+        "labelAr": "شاشة العاكس"
+      },
+      {
+        "id": "meter",
+        "label": "Meter export",
+        "labelAr": "تصدير العداد"
+      },
+      {
+        "id": "led-on",
+        "label": "LED lighting on",
+        "labelAr": "تشغيل إنارة LED"
+      }
+    ]
+  }
+}

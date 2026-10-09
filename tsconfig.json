@@ -4,16 +4,16 @@
   "files": [],
   "references": [
     {
-      "path": "./lib/db"
+      "path": "./packages/db"
     },
     {
-      "path": "./lib/api-client-react"
+      "path": "./packages/api-client"
     },
     {
-      "path": "./lib/api-zod"
+      "path": "./packages/api-zod"
     },
     {
-      "path": "./lib/greenroute-research"
+      "path": "./packages/screening"
     }
   ]
 }
