@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "GreenRoute"
+description = "GreenRoute connects university green-project submissions to a traceable first review for bank teams, organizing evidence, gaps and next steps while keeping final decisions with the bank."
+version = "1.0.0"
+id = "artifacts/campus-finance"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 22745
+
+[services.development]
+run = "pnpm --filter @workspace/campus-finance run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/campus-finance", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/campus-finance/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "22745"
+BASE_PATH = "/"

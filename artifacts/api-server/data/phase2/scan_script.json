@@ -1,0 +1,16 @@
+{
+  "delivery": [
+    { "tone": "green", "serial": "SP58-2026-A-004817", "title": "Matched", "titleAr": "مطابق", "detail": "SunPeak 580 W, on the packing list.", "detailAr": "سن بيك 580 واط، موجود في قائمة التعبئة.", "bank": "Panel matched to the approved scope." },
+    { "tone": "green", "serial": "SP58-2026-A-004818", "title": "Matched", "titleAr": "مطابق", "detail": "SunPeak 580 W, on the packing list.", "detailAr": "سن بيك 580 واط، موجود في قائمة التعبئة.", "bank": "Panel matched to the approved scope." },
+    { "tone": "red", "serial": "SP58-2025-A-001203", "title": "Stop. Already financed", "titleAr": "توقف. ممول سابقاً", "detail": "This panel was financed before (Al-Noor School, 2025). Set it aside.", "detailAr": "هذا اللوح مُموَّل سابقاً (مدرسة النور، 2025). ضعه جانباً.", "bank": "Duplicate serial blocked. Replacement needed." },
+    { "tone": "amber", "serial": "SP55-2026-B-000412", "title": "Check. Different model", "titleAr": "تحقق. طراز مختلف", "detail": "This is SunPeak 550 W. The approved model is 580 W.", "detailAr": "هذا سن بيك 550 واط. الطراز المعتمد 580 واط.", "bank": "Model swap flagged: 550 W instead of 580 W." },
+    { "tone": "green", "serial": "SP58-2026-A-004819", "title": "Matched", "titleAr": "مطابق", "detail": "Replacement for the blocked panel.", "detailAr": "بديل عن اللوح الموقوف.", "bank": "Red item resolved with an approved panel." },
+    { "tone": "green", "serial": "SP58-2026-A-004820", "title": "Matched", "titleAr": "مطابق", "detail": "Replacement for the 550 W panel.", "detailAr": "بديل عن لوح 550 واط.", "bank": "Amber item resolved with the approved model." },
+    { "tone": "green", "serial": "INV-250-2026-JO-00731", "title": "Inverter matched", "titleAr": "العاكس مطابق", "detail": "Inverter serial matches the approved scope. Delivery is complete.", "detailAr": "الرقم التسلسلي للعاكس مطابق. اكتمل التوريد.", "bank": "Inverter serial matched. Delivery complete." }
+  ],
+  "switchOn": [
+    { "tone": "amber", "title": "Retake", "titleAr": "أعد التصوير", "detail": "The photo is too blurry to read. Hold steady and retake.", "detailAr": "الصورة غير واضحة. ثبّت الهاتف وأعد التصوير.", "bank": "Photo unreadable. Retake requested." },
+    { "tone": "green", "title": "Inverter running", "titleAr": "العاكس يعمل", "detail": "Reads 182.4 kW now and 1,286 kWh so far. Serial matches.", "detailAr": "القراءة 182.4 كيلوواط الآن و1,286 كيلوواط ساعة حتى الآن. الرقم التسلسلي مطابق.", "bank": "Inverter running at 182.4 kW, 1,286 kWh so far. Serial matches delivery." },
+    { "tone": "green", "title": "Meter export started", "titleAr": "بدأ التصدير على العداد", "detail": "The meter shows power going to the grid. Switch-on is complete.", "detailAr": "العداد يُظهر تصدير الكهرباء إلى الشبكة. اكتمل التشغيل.", "bank": "Meter export started. Switch-on complete." }
+  ]
+}

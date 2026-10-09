@@ -1,0 +1,12 @@
+{
+  "applicationId": "approved-solar-led-upgrade",
+  "stage": "approved",
+  "approvedAt": "2026-10-01T09:00:00.000Z",
+  "openedAt": null,
+  "delivery": [],
+  "switchOn": [],
+  "payments": {
+    "1": null,
+    "2": null
+  }
+}
