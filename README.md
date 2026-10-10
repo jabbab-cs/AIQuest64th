@@ -5,6 +5,8 @@ The intended approach: AI reads, rules decide, the bank approves.
 
 Built for AI Quest 2026 (HTU, Amman). The packaged demo uses synthetic cases, prepared document evidence and scripted verification results. It demonstrates the proposed workflow; it does not perform live AI extraction, validate real equipment or transfer money.
 
+Presentation: [Tahaqqaq-Presentation.pptx](Tahaqqaq-Presentation.pptx)
+
 - **Screening.** An institution submits the provided demo files. The bank explores prepared evidence, calculations, findings, a report and missing-evidence requests. The demo does not read or AI-screen arbitrary new uploads.
 - **Verification.** An installer opens an approved project on a phone and steps through delivery and switch-on checks. Scripted outcomes demonstrate mismatches, retakes and replacements. Working workflow rules block simulated payment releases until the checks are complete, then make a demo certificate available.
 
